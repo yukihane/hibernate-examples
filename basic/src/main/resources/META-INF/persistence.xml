@@ -6,14 +6,14 @@
   version="2.2">
   <persistence-unit name="PU" transaction-type="RESOURCE_LOCAL">
     <properties>
-      <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
-      <property name="javax.persistence.jdbc.url" value="jdbc:h2:./target/testdb;DB_CLOSE_ON_EXIT=FALSE" />
+      <property name="javax.persistence.jdbc.driver" value="com.sybase.jdbc4.jdbc.SybDriver" />
+      <property name="javax.persistence.jdbc.url" value="jdbc:sybase:Tds:localhost:5000/hello_db" />
       <property name="javax.persistence.jdbc.user" value="sa" />
-      <property name="javax.persistence.jdbc.password" value="sa" />
+      <property name="javax.persistence.jdbc.password" value="Sybase123" />
 
       <property name="hibernate.show_sql" value="true" />
       <property name="hibernate.format_sql" value="true" />
-      <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />
+      <property name="hibernate.dialect" value="org.hibernate.dialect.SybaseDialect" />
       <property name="hibernate.hbm2ddl.auto" value="create-drop" />
     </properties>
 
