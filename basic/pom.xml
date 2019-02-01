@@ -12,4 +12,11 @@
 
   <artifactId>basic</artifactId>
 
+  <dependencies>
+    <dependency>
+      <groupId>com.github.yukihane.hibernate-examples</groupId>
+      <artifactId>hibernate-examples-entity</artifactId>
+    </dependency>
+  </dependencies>
+
 </project>
