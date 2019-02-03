@@ -94,6 +94,6 @@
 
   <modules>
     <module>hibernate-examples-entity</module>
-    <module>basic</module>
+    <module>empty</module>
   </modules>
 </project>

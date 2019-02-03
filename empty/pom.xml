@@ -10,13 +10,6 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>basic</artifactId>
-
-  <dependencies>
-    <dependency>
-      <groupId>com.github.yukihane.hibernate-examples</groupId>
-      <artifactId>hibernate-examples-entity</artifactId>
-    </dependency>
-  </dependencies>
+  <artifactId>empty</artifactId>
 
 </project>
