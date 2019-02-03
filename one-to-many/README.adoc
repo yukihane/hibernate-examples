@@ -1,0 +1,56 @@
+:imagesdir: ./doc/img
+
+:toc:
+
+= one-to-many のマッピングバリエーション
+
+== サンプルエンティティ説明
+
+image::base-erd.png[]
+
+クラス(ClassRoom)と生徒(Student)の1対多関連を題材に見ていきます。
+(クラスと担任の先生(Teacher)の1対1も参考に登場させていますが、ここで説明する内容の本質には関わりません)
+
+== 最もシンプルに書く
+
+=== ポイント
+
+* クラスに `@Entity` アノテーションをつけます
+* PKに `@Id` アノテーションをつけます
+* 通常のカラムに何かアノテーションを付与する必要はありません
+* 他のクラスとのリンクには `@OneToMany` や `@OneToOne` といったアノテーションをつけます
+
+
+=== サンプルコード
+
+link:src/main/java/entity/pattern1/[]
+
+
+=== SQL
+
+----
+Hibernate: 
+    
+    create table ClassRoom1_Student1 (
+       ClassRoom1_id bigint not null,
+        students_id bigint not null,
+        primary key (ClassRoom1_id, students_id)
+    )
+Hibernate: 
+    
+    create table Student1 (
+       id bigint not null,
+        name varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table Teacher1 (
+       id bigint not null,
+        name varchar(255),
+        primary key (id)
+    )
+----
+
+=== テーブル
+
