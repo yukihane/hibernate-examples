@@ -95,6 +95,6 @@
   <modules>
     <module>hibernate-examples-entity</module>
     <module>empty</module>
-    <module>setting</module>
+    <module>one-to-many</module>
   </modules>
 </project>
